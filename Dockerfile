@@ -54,7 +54,8 @@ RUN mkdir ${PROJECT_DIR} \
 
 WORKDIR /ta-lib
 
-RUN pip install 'numpy==1.14.0' \
+RUN pip install 'setuptools==45' \
+  && pip install 'numpy==1.16.6' \
   && pip install 'scipy==1.0.0' \
   && pip install 'pandas==0.19.2' \
   && ./configure --prefix=/usr \
